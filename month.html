@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="month.css">
+    <title>month</title>
+</head>
+
+<body>
+    <div class="big">
+        <input type="text" id="input" placeholder="input month here">
+        <button id="btn" onclick="display()">Click Me</button>
+        <p id="paragraph"></p>
+    </div>
+
+
+    <script>
+
+
+        // function display() {
+        //     let input1 = document.getElementById('input')
+        //     let button = document.getElementById('btn')
+        //     let answer = document.getElementById('paragraph')
+        //     let final = input1.value
+        //     final2 = final.replaceAll(/January|March|May|July|August|October| Decenber/gi, "31").replaceAll(/april|june|september|Novembe/gi, "30").replaceAll(/february/gi, "28/29")
+        //     answer.textContent = final2
+        // }
+
+
+        prompt("Enter Your Month Here", "month")
+        function display() {
+            let input1 = document.getElementById('input')
+            let button = document.getElementById('btn')
+            let answer = document.getElementById('paragraph')
+            let ooutput = input1.value
+            switch (ooutput.toLowerCase()) {
+                case "january":
+                    answer.innerHTML = "31"
+                    break;
+                case "february":
+                    answer.innerHTML = "28/29"
+                    break;
+
+                case "march":
+                    answer.innerHTML = "31"
+                    break;
+                case "april":
+                    answer.innerHTML = "30"
+                    break;
+
+                case "may":
+                    answer.innerHTML = "31"
+                    break;
+
+                case "june":
+                    answer.innerHTML = "30"
+                    break;
+
+                case "july":
+                    answer.innerHTML = "31"
+                    break;
+
+                case "august":
+                    answer.innerHTML = "31"
+                    break;
+
+                case "september":
+                    answer.innerHTML = "30"
+                    break;
+
+                case "october":
+                    answer.innerHTML = "31"
+                    break;
+
+                case "november":
+                    answer.innerHTML = "30"
+                    break;
+
+                case "december":
+                    answer.innerHTML = "31"
+                    break;
+
+                default:
+                    alert("MAKE SURE THE WORD IS CORRECT")
+                    break;
+            }
+        }
+        display()
+    </script>
+
+
+</body>
+
+</html>
